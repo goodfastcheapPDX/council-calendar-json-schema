@@ -2,8 +2,7 @@
   "type": "object",
   "properties": {
     "events_found": {
-      "type": "boolean",
-      "description": "Whether any public events were found in the email"
+      "type": "boolean"
     },
     "events": {
       "type": "array",
@@ -12,22 +11,10 @@
         "properties": {
           "title": {"type": "string"},
           "date": {"type": "string"},
-          "start_time": {"type": "string"},
-          "end_time": {"type": "string"},
           "location": {"type": "string"},
-          "description": {"type": "string"},
-          "councilor_name": {"type": "string"},
-          "event_type": {"type": "string", "enum": ["meeting", "hearing", "town_hall", "forum", "office_hours", "other"]}
-        },
-        "required": ["title", "date", "location", "councilor_name", "event_type"],
-        "additionalProperties": false
+          "councilor_name": {"type": "string"}
+        }
       }
-    },
-    "reason": {
-      "type": "string",
-      "description": "Explanation when no events are found"
     }
-  },
-  "required": ["events_found"],
-  "additionalProperties": false
+  }
 }
